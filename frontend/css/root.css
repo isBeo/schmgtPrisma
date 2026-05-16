@@ -1,0 +1,60 @@
+:root {
+    /* COLORS */
+    --bg-main: #0d0d0d;          /* main background (deep black) */
+    --bg-secondary: #1a1a1a;     /* cards / sections */
+    --bg-light: #262626;         /* hover / subtle areas */
+
+    --primary: #27ae60;          /* green main */
+    --primary-hover: #52d689;    /* lighter green */
+    --primary-dark: #1e8449;     /* darker green */
+
+    --text-main: #ffffff;        /* main text */
+    --text-secondary: #b3b3b3;   /* secondary text */
+    --text-muted: #808080;       /* low emphasis */
+
+    --border-color: #333333;
+
+    /* STATUS COLORS */
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+
+    /* SHADOW */
+    --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.4);
+    --shadow-strong: 0 8px 20px rgba(0, 0, 0, 0.7);
+
+    /* BORDER RADIUS */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+
+    /* SPACING */
+    --padding-sm: 8px;
+    --padding-md: 16px;
+    --padding-lg: 24px;
+
+    /* FONT */
+    --font-main: 'Poppins', sans-serif;
+
+    /* TRANSITIONS */
+    --transition-fast-time:0.2s;
+    --transition-fast: ease-in-out;
+    --transition-smooth-time: 0.4s;
+    --transition-smooth: ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--bg-light);
+    color: var(--text-main);
+    font-size: 16px;
+}
+
+div{
+    scrollbar-width: none;
+}

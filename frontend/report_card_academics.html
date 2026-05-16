@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Card | [studentNAme]</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-[var(--bg-light)] text-[var(--text-main)] w-full h-full">
+    <header class="sticky top-0 z-50 flex items-center justify-between px-[var(--padding-md)] md:px-[var(--padding-lg)] py-[var(--padding-sm)] bg-[var(--primary-hover)] backdrop-blur-md shadow-sm">
+        <div class="flex items-center gap-3">
+            <button type="button"
+                class="flex items-center justify-center w-[42px] h-[42px] rounded-[var(--radius-md)] text-[var(--text-main)] hover:bg-white/10 transition md:hidden"
+                aria-label="Open menu">
+                <i id="menuToggle" class="fa-solid fa-bars text-[20px]"></i>
+            </button>
+
+            <h1 class="text-[var(--bg-main)] font-semibold text-[20px] md:text-[26px] tracking-wide">
+                [schoolName]
+            </h1>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button class="relative flex items-center justify-center w-[40px] h-[40px] rounded-full hover:bg-white/10 transition">
+                <i class="fa-regular fa-bell text-[20px] text-[var(--text-main)]"></i>
+                <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+            </button>
+
+            <div class="flex items-center gap-2 cursor-pointer group">
+                <img src="/frontend/img/FB_IMG_1738065673948.jpg.jpeg"
+                    class="w-[40px] h-[40px] object-cover rounded-full ring-2 ring-transparent group-hover:ring-white/40 transition">
+                <span class="hidden md:block text-sm text-[var(--text-main)]">
+                    Class
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <section class="flex flex-col md:flex-row md:justify-between h-[calc(100vh-56px)]">
+        <nav class="hidden w-screen h-[calc(100vh-180px)] fixed px-[var(--padding-sm)] py-[var(--padding-sm)] bg-[var(--bg-main)] text-[var(--text-secondary)] flex flex-col gap-[var(--padding-sm)] overflow-x-auto md:w-[200px] md:fixed md:top-[56px] md:h-[calc(100vh-56px)] md:py-[var(--padding-md)] md:flex">
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Home</button>
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Management</button>
+            <div class="hidden flex flex-col rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">
+                <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Student</button>
+                <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Teacher</button>
+                <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Class</button>
+                <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Subject</button>
+            </div>
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Message</button>
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)] mt-auto">Settings</button>
+        </nav>
+
+        <main class="min-h-screen m-[var(--padding-sm)] bg-transparent rounded-[var(--radius-lg)] grid grid-cols-2 w-full md:m-[var(--padding-lg)] md:ml-[calc(200px+var(--padding-lg))] gap-[var(--padding-lg)] gap-y-[var(--padding-lg)]">
+            <section class="col-span-2 bg-white/5 rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                <h1 class="text-2xl font-bold">Report Card</h1>
+            </section>
+            <section class="col-span-2 bg-white/5 rounded-[var(--radius-lg)] p-[var(--padding-lg)] grid grid-cols-1 gap-[10px] gap-y-[var(--padding-lg)]">
+                <div class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Name: </div>
+                <div class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Class: </div>
+                <div class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Term: </div>
+            </section>
+            <section class="bg-white/5 rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                <table class="w-full">
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] font-bold text-[var(--text-muted)]" colspan="2">Grading System</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">A</td>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">70 - 100</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">B</td>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">60 - 69</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">C</td>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">50 - 59</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">D</td>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">40 - 49</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">F</td>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">0 - 39</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="bg-white/5 rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                <table class="w-full">
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] font-bold text-[var(--text-muted)]" colspan="2">Behaviour</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Behaviour1</td>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Good</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Behaviour2</td>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Good</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Behaviour3</td>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Good</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="col-span-2 bg-white/5 rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                <table class="w-full">
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] font-bold text-[var(--text-muted)]" colspan="2">Academics</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Academics1</td>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Good</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Academics2</td>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Good</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Academics3</td>
+                        <td class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Good</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+    </section>
+
+    <!-- Using Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/header.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+</html>

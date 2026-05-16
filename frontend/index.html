@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index | [schoolName]</title>
+
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+</head>
+
+<body class="bg-[var(--bg-light)] text-[var(--text-main)] w-full h-full">
+    <!-- HEADER -->
+    <header class="flex flex-col gap-[var(--padding-sm)] px-[var(--padding-sm)] py-[var(--padding-md)] bg-[var(--primary-hover)] sticky top-0 md:flex-row md:items-center md:justify-between md:gap-[var(--padding-md)] md:px-[var(--padding-lg)]">
+        <div class="order-2 flex items-center gap-[10px] md:order-1">
+            <button type="button" class="flex items-center justify-center w-[40px] h-[40px] rounded-[var(--radius-md)] bg-transparent text-[var(--text-main)] md:hidden transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]" aria-label="Open menu">
+                <i id="menuToggle" class="fa-solid fa-bars text-[20px]"></i>
+            </button>
+            <h1 class="text-[var(--bg-main)] font-bold text-[24px] md:text-[30px]">[schoolName]</h1>
+        </div>
+
+        <div class="order-1 flex items-center gap-[10px] w-full md:order-2 md:w-auto">
+            <div class="flex-1 md:flex-none md:w-auto">
+                <input type="text" placeholder="Search..." class="bg-[var(--bg-main)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] w-full md:w-auto">
+            </div>
+            
+            <div>
+                <i class="fa-regular fa-bell text-[24px]"></i>
+            </div>
+            
+            <div>
+                <button class="border border-black bg-red-500 rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold hover:bg-black transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Sign in</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="flex flex-col md:flex-row md:justify-between">
+        
+        <!-- NAVIGATION -->
+        <nav class="w-screen h-screen fixed px-[var(--padding-sm)] py-[var(--padding-sm)] bg-[var(--bg-main)] text-[var(--text-secondary)] flex flex-col gap-[var(--padding-sm)] overflow-x-auto md:w-[200px] md:fixed md:top-[86px] md:h-screen md:py-[var(--padding-md)] md:flex">
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Home</button>
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">About us</button>
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Admission</button>
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Facilities</button>
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Contact</button>
+        </nav>
+        
+        <!-- BODY -->
+        <section class="w-full">
+            <!-- HOME SECTION -->
+            <section id="home" class="m-[var(--padding-sm)] bg-transparent rounded-[var(--radius-lg)] flex flex-col gap-[var(--padding-md)] md:m-[var(--padding-lg)] md:ml-[calc(200px+var(--padding-lg))] md:gap-[var(--padding-lg)]">
+                <!-- HERO SECTION -->
+                <section class="min-h-[60vh] w-full bg-[url('img/1_MT_sL_190319Haygroveschoolminibus_02.avif')] bg-cover bg-center px-[var(--padding-md)] rounded-[var(--radius-lg)] py-[var(--padding-md)] md:min-h-[70vh] md:h-screen md:px-[var(--padding-lg)]">
+                    <h1 class="text-[32px] leading-[1.1] md:text-[60px]">Welcome to <br>[schoolName] School</h1>
+                    <p class="text-[16px] leading-[1.4] md:text-[24px] md:leading-[1]">Raising future leaders with excellence, <br>discipline, and innovation.</p>
+                    <button onclick="showSection(admissionSection)" class="border border-black bg-white rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[red] my-[var(--padding-md)] hover:bg-red-500 hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Apply Now</button>
+                </section>
+
+                <main class="rounded-[var(--radius-lg)]">
+                    <div class="flex flex-col gap-[10px] py-[var(--padding-lg)] md:flex-row">
+                        <!-- WELCOME SECTION -->
+                        <section class="flex-1 bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-md)] md:p-[var(--padding-lg)]">
+                            <h2 class="font-bold text-[24px]">Welcome Message</h2>
+                            <hr class="my-[var(--padding-sm)]">
+                            <p class="text-[16px] md:text-[18px]">
+                                At [schoolName] School, we are committed to providing quality education in a safe and nurturing
+                                environment.
+                                Our goal is to develop students academically, morally, and socially.
+                            </p>
+                        </section>
+    
+                        <hr>
+    
+                        <!-- ABOUT SECTION -->
+                        <section class="flex-1 bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-md)] md:p-[var(--padding-lg)]">
+                            <h2 class="font-bold text-[24px]">About Us</h2>
+                            <hr class="my-[var(--padding-sm)]">
+                            <p class="text-[16px] md:text-[18px]">
+                                [schoolName] School is a leading institution in Port Harcourt dedicated to excellence in education.
+                                We combine modern teaching methods with strong moral values to shape well-rounded individuals.
+                            </p>
+                            <a onclick="showSection(aboutUs)" class="text-[blue] underline cursor-pointer">Learn More</a>
+                        </section>
+    
+                        <hr>
+    
+                        <!-- LOCATION SECTION -->
+                        <section class="flex-1 bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-md)] md:p-[var(--padding-lg)]">
+                            <h2 class="font-bold text-[24px]">Our Location</h2>
+                            <hr class="my-[var(--padding-sm)]">
+                            <p class="text-[16px] md:text-[18px]">
+                                We are located at No. 1 Las Eke Lane, Ogbatal / Elitor Link Road, Wofi, Port Harcourt.
+                            </p>
+                            <p>Easy access and a serene learning environment for students.</p>
+                        </section>
+            
+                    </div>
+            
+                    <div>
+                        <!-- TESTIMONIAL SECTION -->
+                        <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-md)] md:p-[var(--padding-lg)]">
+                            <h2 class="font-bold text-[24px]">What Parents Say</h2>
+                            <hr class="my-[var(--padding-sm)]">
+                            <div class="flex flex-col gap-[10px] md:flex-row">
+                                <div class="flex flex-col flex-1 gap-[10px]">
+                                    <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Parent testimonial" class="rounded-[var(--radius-lg)] w-full h-[220px] object-cover md:h-auto">
+                                    <blockquote>
+                                        "[schoolName] School has given my child the confidence to speak up, learn boldly, and enjoy coming to school every day."
+                                    </blockquote>
+                                    <p class="font-bold">- Mrs. Okafor, Parent</p>
+                                </div>
+            
+                                <hr>
+                                <div class="flex flex-col flex-1 gap-[10px]">
+                                    <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Parent testimonial" class="rounded-[var(--radius-lg)] w-full h-[220px] object-cover md:h-auto">
+                                    <blockquote>
+                                        "The teachers are attentive, the environment is welcoming, and the academic progress has been truly impressive."
+                                    </blockquote>
+                                    <p class="font-bold">- Mr. Briggs, Parent</p>
+                                </div>
+            
+                                <hr>
+                                <div class="flex flex-col flex-1 gap-[10px]">
+                                    <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Parent testimonial" class="rounded-[var(--radius-lg)] w-full h-[220px] object-cover md:h-auto">
+                                    <blockquote>
+                                        "[schoolName] School combines discipline and warmth in a way that helps children grow academically and in character."
+                                    </blockquote>
+                                    <p class="font-bold">- Mrs. Peters, Parent</p>
+                                </div>
+            
+                            </div>
+            
+                        </section>
+            
+                    </div>
+            
+                    <div class="h-[40vh] rounded-[var(--radius-lg)] bg-cover bg-fixed bg-center mt-[var(--padding-lg)] bg-[url('img/1_MT_sL_190319Haygroveschoolminibus_02.avif')] md:h-[50vh] md:bg-fixed">
+                        <!-- APPLY NOW SECTION -->
+                        <section class="flex flex-col items-center justify-center text-center h-full w-full bg-gradient-to-b from-black/50 to-white/50 rounded-[var(--radius-lg)] ">
+                            <h2 class="font-bold text-[24px]">Start Your Child's Journey Today</h2>
+                            <p class="font-bold text-[18px] md:text-[24px]">Admissions are open for new students. Secure a bright future now.</p>
+                            <button onclick="showSection(admissionSection)" class="border border-black bg-white rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[red] my-[var(--padding-md)] hover:bg-red-500 hover:text-white transiton duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Register Your Child</button>
+                        </section>
+            
+                    </div>
+            
+                </main>
+            
+            </section>
+
+            <!-- ABOUT US SECTION -->
+            <section id="aboutUs" class="m-[var(--padding-sm)] bg-transparent rounded-[var(--radius-lg)] flex flex-col gap-[var(--padding-md)] md:m-[var(--padding-lg)] md:ml-[calc(200px+var(--padding-lg))] md:gap-[var(--padding-lg)]">
+
+                <!-- SCHOOL HISTORY -->
+                <section class="bg-black p-[var(--padding-lg)] rounded-[var(--radius-lg)] text-white">
+                    <h1 class="font-bold text-[24px]">Our History</h1>
+                    <p>
+                        Floraville School was established with a vision to provide quality education
+                        that nurtures excellence, discipline, and leadership in young minds.
+                    </p>
+                    <p>
+                        Over the years, the school has grown into a reputable institution in Port Harcourt,
+                        known for academic excellence and strong moral values.
+                    </p>
+                </section>
+
+                <!-- STAFF SECTION -->
+                <section class="bg-black p-[var(--padding-lg)] rounded-[var(--radius-lg)] text-white">
+                    <h2 class="font-bold text-[24px]">Our Staff</h2>
+                    <p>
+                        Our teachers are highly qualified professionals dedicated to the success of every student.
+                        They use modern teaching methods to ensure students understand and excel in their studies.
+                    </p>
+
+                    <div class="w-full flex gap-[10px] overflow-x-auto overflow-y-hidden scrollbar-hide">
+                        <div class="w-[260px] flex-shrink-0 md:w-[300px]">
+                            <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Mrs Grace Johnson" class="rounded-[var(--radius-lg)]">
+                            <h3>Mrs. Grace Johnson</h3>
+                            <p class="font-bold">Head Teacher</p>
+                        </div>
+
+                        <div class="w-[260px] flex-shrink-0 md:w-[300px]">
+                            <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Mr David Williams" class="rounded-[var(--radius-lg)]">
+                            <h3>Mr. David Williams</h3>
+                            <p class="font-bold">Mathematics Teacher</p>
+                        </div>
+
+                        <div class="w-[260px] flex-shrink-0 md:w-[300px]">
+                            <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Mrs Sarah Peters" class="rounded-[var(--radius-lg)]">
+                            <h3>Mrs. Sarah Peters</h3>
+                            <p class="font-bold">English Teacher</p>
+                        </div>
+
+                        <div class="w-[260px] flex-shrink-0 md:w-[300px]">
+                            <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Mrs Sarah Peters" class="rounded-[var(--radius-lg)]">
+                            <h3>Mrs. Sarah Peters</h3>
+                            <p class="font-bold">English Teacher</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ACHIEVEMENTS -->
+                <section class="bg-[var(--bg-main)] p-[var(--padding-lg)]">
+                    <h2 class="font-bold text-[24px]">Our Achievements</h2>
+                    <ul>
+                        <li>Best Primary School Award - Rivers State</li>
+                        <li>Outstanding WAEC Results Yearly</li>
+                        <li>100% Student Graduation Rate</li>
+                        <li>Winners of Inter-School Competitions</li>
+                    </ul>
+
+                    <p>
+                        Our commitment to excellence continues to produce students who excel both academically
+                        and in character.
+                    </p>
+                </section>
+
+            </section>
+
+            <!-- ADMISSION SECTION -->
+            <section id="admission" class="m-[var(--padding-sm)] bg-transparent rounded-[var(--radius-lg)] flex flex-col gap-[var(--padding-md)] md:m-[var(--padding-lg)] md:ml-[calc(200px+var(--padding-lg))] md:gap-[var(--padding-lg)]">
+
+                <!-- APPLY SECTION -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif"alt="Students learning" class="rounded-t-[var(--radius-lg)]">
+
+                    <h1 class="font-bold text-[24px]">Apply for Admission</h1>
+                    <p>
+                        Begin your child's journey at Floraville School today.
+                        Fill out our admission form and secure a place for your child.
+                    </p>
+                    <button id="applyBtn" type="button" class="border border-black bg-blue-500 rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold hover:bg-red-500 transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Apply Now</button>
+                </section>
+
+                <!-- HOW TO APPLY -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif"alt="Application steps" class="rounded-t-[var(--radius-lg)]">
+
+                    <h2 class="font-bold text-[24px]">How to Apply</h2>
+                    <ol class="list-decimal list-inside">
+                        <li>Click the Apply Now button to open the admission form.</li>
+                        <li>Fill in the student's name, parent details, email address, and preferred class.</li>
+                        <li>Submit the form so our admissions team can review your request.</li>
+                        <li>Prepare the required documents, including a birth certificate, passport photograph, and previous school records.</li>
+                        <li>Wait for a confirmation message from the school with the next steps for screening and enrollment.</li>
+                    </ol>
+                </section>
+
+                <!-- SCHOOL FEES -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <h2 class="font-bold text-[24px]">School Fees</h2>
+                    <p>
+                        Our fees are affordable and structured to provide the best value for quality education.
+                    </p>
+
+                    <table class="border-[1px] border-[var(--text-muted)] border-collapse block overflow-x-auto table">
+                        <thead>
+                            <tr>
+                                <th class="text-left p-[var(--padding-md)] bg-blue-800">Class</th>
+                                <th class="text-left p-[var(--padding-md)] bg-blue-800">Termly Fees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border-[1px] border-[var(--text-muted)] p-[var(--padding-md)]">Nursery</td>
+                                <td class="border-[1px] border-[var(--text-muted)] p-[var(--padding-md)]">₦50,000</td>
+                            </tr>
+                            <tr>
+                                <td class="border-[1px] border-[var(--text-muted)] p-[var(--padding-md)]">Primary</td>
+                                <td class="border-[1px] border-[var(--text-muted)] p-[var(--padding-md)]">₦70,000</td>
+                            </tr>
+                            <tr>
+                                <td class="border-[1px] border-[var(--text-muted)] p-[var(--padding-md)]">Secondary</td>
+                                <td class="border-[1px] border-[var(--text-muted)] p-[var(--padding-md)]">₦100,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- VISIT SCHOOL -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif"alt="School building">
+
+                    <h2 class="font-bold text-[24px]">Visit the School</h2>
+                    <p>
+                        Families are welcome to visit Floraville School to explore our classrooms, meet members of our staff,
+                        and learn more about our learning environment. Use the schedule button below to request a convenient
+                        date, and our admissions team will confirm your visit and guide you through the next steps.
+                    </p>
+                    <button id="visitBtn" type="button"  class="border border-black bg-blue-500 rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold hover:bg-red-500 transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Schedule a Visit</button>
+                </section>
+
+                <!-- FAQ -->
+                <section class="faq bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <h2 class="font-bold text-[24px] text-orange-400">Frequently Asked Questions</h2>
+
+                    <div class="bg-[var(--bg-light)] p-[var(--padding-md)] rounded-[var(--radius-lg)] cursor-pointer hover:bg-[var(--text-muted)] transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">
+                        <h3 class="font-bold text-[24px]">What age can my child start?</h3>
+                        <p class="hidden">We accept children from age 2 and above.</p>
+                    </div>
+
+                    <div class="bg-[var(--bg-light)] p-[var(--padding-md)] rounded-[var(--radius-lg)] cursor-pointer hover:bg-[var(--text-muted)] transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">
+                        <h3 class="font-bold text-[24px]">Do you provide school transport?</h3>
+                        <p class="hidden">Yes, we offer safe and reliable transportation services.</p>
+                    </div>
+
+                    <div class="bg-[var(--bg-light)] p-[var(--padding-md)] rounded-[var(--radius-lg)] cursor-pointer hover:bg-[var(--text-muted)] transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">
+                        <h3 class="font-bold text-[24px]">What documents are required?</h3>
+                        <p class="hidden">Birth certificate, passport photograph, and previous school records.</p>
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- FACILITIES SECTION -->
+            <section id="facilities" class="m-[var(--padding-sm)] bg-transparent rounded-[var(--radius-lg)] flex flex-col gap-[var(--padding-md)] md:m-[var(--padding-lg)] md:ml-[calc(200px+var(--padding-lg))] md:gap-[var(--padding-lg)]">
+                <!-- CLASSROOM -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <div class="flex flex-col gap-[10px] items-start md:flex-row md:items-center">
+                        <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Classroom" class="w-full rounded-[var(--radius-lg)] md:w-[30%]">
+                        <div class="w-full md:w-[70%]">
+                            <h1 class="font-bold text-[24px]">Modern Classrooms</h1>
+                            <p>Our classrooms are spacious, well ventilated, and designed to support focused learning with age-appropriate furniture and teaching resources.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- STAFF ROOM -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <div class="flex flex-col gap-[10px] items-start md:flex-row-reverse md:items-center">
+                        <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Staff Room" class="w-full rounded-[var(--radius-lg)] md:w-[30%]">
+                        <div class="w-full md:w-[70%]">
+                            <h2 class="font-bold text-[24px]">Staff Room</h2>
+                            <p>A comfortable and well-equipped staff room gives our teachers a professional space to prepare lessons, collaborate, and support student progress effectively.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LABORATORY -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <div class="flex flex-col gap-[10px] items-start md:flex-row md:items-center">
+                        <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Laboratory" class="w-full rounded-[var(--radius-lg)] md:w-[30%]">
+                        <div class="w-full md:w-[70%]">
+                            <h2 class="font-bold text-[24px]">Science Laboratory</h2>
+                            <p>Our science laboratory provides hands-on learning experiences that help students understand scientific concepts through safe and practical experiments.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LIBRARY -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <div class="flex flex-col gap-[10px] items-start md:flex-row-reverse md:items-center">
+                        <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Library" class="w-full rounded-[var(--radius-lg)] md:w-[30%]">
+                        <div class="w-full md:w-[70%]">
+                            <h2 class="font-bold text-[24px]">Library</h2>
+                            <p>The library offers a quiet and resourceful environment where students can read widely, carry out research, and build strong independent learning habits.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SPORTS -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <div class="flex flex-col gap-[10px] items-start md:flex-row md:items-center">
+                        <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Sports" class="w-full rounded-[var(--radius-lg)] md:w-[30%]">
+                        <div class="w-full md:w-[70%]">
+                            <h2 class="font-bold text-[24px]">Physical Education & Sports</h2>
+                            <p>We encourage physical fitness and teamwork through structured sporting activities that help students stay active, disciplined, and confident.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SICK BAY -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <div class="flex flex-col gap-[10px] items-start md:flex-row-reverse md:items-center">
+                        <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Sick Bay" class="w-full rounded-[var(--radius-lg)] md:w-[30%]">
+                        <div class="w-full md:w-[70%]">
+                            <h2 class="font-bold text-[24px]">Sick Bay</h2>
+                            <p>Our sick bay is staffed to provide prompt first aid and basic care, ensuring students receive immediate attention whenever health concerns arise.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section id="contact" class="m-[var(--padding-sm)] bg-transparent rounded-[var(--radius-lg)] flex flex-col gap-[var(--padding-md)] md:m-[var(--padding-lg)] md:ml-[calc(200px+var(--padding-lg))] md:gap-[var(--padding-lg)]">
+
+                <!-- CONTACT FORM -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Floraville School reception" class="rounded-[var(--radius-lg)]">
+
+                    <h1 class="font-bold text-[24px]">Contact Us</h1>
+                    <p>Have questions? Send us a message and we will get back to you.</p>
+
+                    <form id="contactForm" action="#" method="post" class="flex flex-col gap-[10px]">
+                        <label for="name" class="font-bold">Full Name:</label>
+                        <input type="text" id="name" name="name" required class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)]">
+
+                        <label for="email" class="font-bold">Email Address:</label>
+                        <input type="email" id="email" name="email" required class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)]">
+
+                        <label for="message" class="font-bold   ">Message:</label>
+                        <textarea id="message" name="message" rows="5" required class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)]"></textarea>
+
+                        <button type="submit" class="border border-black bg-blue-500 rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold hover:bg-red-500 transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Send Message</button>
+                    </form>
+                </section>
+
+                <!-- LOCATION -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <img src="img/1_MT_sL_190319Haygroveschoolminibus_02.avif" alt="Floraville School campus" class="rounded-[var(--radius-lg)]">
+                    <h2 class="font-bold text-[24px]">Our Location</h2>
+                    <p>No. 1 Las Eke Lane, Ogbatal / Elitor Link Road, Wofi, Port Harcourt.</p>
+                    <p>Email: floraville@rocketmail.com</p>
+                    <p>Phone: +234(0)812 201 7554, +234(0)805 259 6251</p>
+                </section>
+
+                <!-- SOCIAL MEDIA -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <h2 class="font-bold text-[24px]">Reach Us Online</h2>
+                    <p>Use any of the channels below to contact the school directly.</p>
+
+                    <ul class="flex flex-col gap-[10px] md:flex-row md:justify-between">
+                        <li><a href=""><i class="fa-solid fa-envelopes-bulk"></i> Email Us</a></li>
+                        <li><a href=""><i class="fa-solid fa-phone"></i> Call Admissions</a></li>
+                        <li><a href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
+                </section>
+                
+                <!-- GOOGLE MAP -->
+                <section class="bg-[var(--bg-main)] rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                    <h2 class="font-bold text-[24px] text-red-500">Find Us on Map</h2>
+                    <div class="w-full h-[400px] flex items-center justify-center rounded-[var(--radius-lg)] bg-[url('img/1_MT_sL_190319Haygroveschoolminibus_02.avif')] bg-cover bg-center md:h-[600px]">
+                        <a href="" target="_blank" rel="noopener noreferrer" class="text-transparent hover:text-blue-500 hover:underline w-full h-full items-center justify-center flex hover:bg-[rgba(0,0,0,0.7)] rounded-[var(--radius-lg)]">View on Google Maps</a>
+                    </div>
+                </section>
+                
+            </section>
+
+            <!-- GENERAL FOOTER -->
+            <footer class="m-[var(--padding-sm)] bg-[var(--primary-dark)] rounded-[var(--radius-lg)] text-[12px] md:m-[var(--padding-lg)] md:ml-[calc(200px+var(--padding-lg))]">
+                <div class="flex flex-col md:flex-row">
+                    <section class="flex-1 p-[var(--padding-lg)]">
+                        <h3 class="font-bold">[schoolName] School</h3>
+                        <hr>
+                        <p>
+                            [schoolName] School provides quality education focused on excellence, discipline, and leadership.
+                        </p>
+                    </section>
+                    
+                    <section class="flex-1 p-[var(--padding-lg)]">
+                        <h3 class="font-bold">Useful Links</h3>
+                        <hr>
+                        <ul class="underline">
+                            <li><a href="" >Home</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Admission</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </section>
+                    
+                    <section class="flex-1 p-[var(--padding-lg)]">
+                        <h3 class="font-bold">Contact Us</h3>
+                        <hr>
+                        <p>No. 1 Las Eke Lane, Ogbatal / Elitor Link Road, Wofi, Port Harcourt.</p>
+                        <p>Email: [schoolName]@email.com</p>
+                        <p>Phone: +234(0)812 201 7554, +234(0)805 259 6251</p>
+                    </section>
+        
+                </div>
+            
+                <div>
+                    <section class="text-center p-[var(--padding-lg)]">
+                        <h3 class="flex items-center gap-[10px] px-[var(--padding-lg)]">
+                            <div class="flex-1">
+                                <hr>
+                            </div>
+                            <p class="font-bold">Affiliations</p> 
+                            <div class="flex-1">
+                                <hr>
+                            </div>
+                       </h3>
+                        <p>Approved by the Ministry of Education</p>
+                        <p>Member of Educational Development Association</p>
+                    </section>
+            
+                </div>
+            
+                <div>
+                    <section class="bg-[var(--bg-main)] rounded-b-[var(--radius-lg)] p-[var(--padding-sm)] text-center">
+                        <p class="font-bold">
+                            Designed by
+                            <a href="https://github.com/isBeo" target="_blank" rel="noopener noreferrer">isBeo</a>
+                            &
+                            <a href="https://github.com/ENJ-digitalhub" target="_blank" rel="noopener noreferrer">ENJ_digitalhub</a>
+                        </p>
+                    </section>
+            
+                </div>
+            
+            </footer>
+
+        </section>
+        
+    </section>
+
+    <!-- MODAL SECTION -->
+    <!-- APPLY MODAL -->
+    <dialog id="applyModal" class="m-0 inset-0 fixed z-50 justify-center items-center bg-black/50 w-full max-w-[100%] h-full max-h-[100%] backdrop-blur">
+        <div class="flex flex-col gap-[10px] bg-[var(--bg-main)] p-[var(--padding-lg)] w-full max-w-[450px] rounded-[var(--radius-lg)] max-h-[500px] overflow-y-auto">
+            <button class="x text-[var(--text-main)] self-end hover:bg-red-500 w-[24px] h-[24px] flex justify-center items-center rounded-[var(--radius-md)]" type="button" aria-label="Close apply form">&times;</button>
+            <h2 class="font-bold text-[24px] text-red-500">Admission Form</h2>
+            <form id="applyForm" class="flex
+            flex-col gap-[15px]">
+                <div class="flex flex-col">
+                    <label for="studentName">Student Name</label>
+                    <input id="studentName" type="text" name="studentName" placeholder="Enter student name" class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)]">
+                </div>
+                <div class="flex flex-col">
+                    <label for="parentName">Parent Name</label>
+                    <input id="parentName" type="text" name="parentName" placeholder="Enter parent name" class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)]">
+                </div>
+                <div class="flex flex-col">
+                    <label for="applyEmail">Email Address</label>
+                    <input id="applyEmail" type="email" name="email" placeholder="Enter email address" class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)]">
+                </div>
+                <div class="flex flex-col">
+                    <label for="applyClass">Preferred Class</label>
+                    <select id="applyClass" name="preferredClass" class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)]">
+                        <option value="">Select a class</option>
+                        <option value="Nursery">Nursery</option>
+                        <option value="Primary">Primary</option>
+                        <option value="Secondary">Secondary</option>
+                    </select>
+                </div>
+                <button type="submit" class="border border-black bg-blue-500 rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold hover:bg-red-500 transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Submit Application</button>
+            </form>
+        </div>
+    </dialog>
+
+    <!-- VISIT MODAL -->
+    <dialog id="visitModal" class="m-0 inset-0 fixed z-50 justify-center items-center bg-black/50 w-full max-w-[100%] h-full max-h-[100%] backdrop-blur">
+        <div class="flex flex-col gap-[10px] bg-[var(--bg-main)] p-[var(--padding-lg)] w-full max-w-[450px] rounded-[var(--radius-lg)] max-h-[500px] overflow-y-auto">
+            <button class="x self-end text-[var(--text-main)] hover:bg-red-500 w-[24px] h-[24px] flex justify-center items-center rounded-[var(--radius-md)]" type="button" aria-label="Close apply form" type="button" aria-label="Close visit form">&times;</button>
+            <h2 class="font-bold text-[24px] text-red-500">Schedule a Visit</h2>
+            <form id="visitForm" class="flex
+            flex-col gap-[15px]">
+                <div class="flex flex-col">
+                    <label for="visitorName">Full Name</label>
+                    <input id="visitorName" type="text" name="visitorName" placeholder="Enter your full name" class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)]">
+                </div>
+                <div class="flex flex-col">
+                    <label for="visitorPhone">Phone Number</label>
+                    <input id="visitorPhone" type="tel" name="phone" placeholder="Enter your phone number" class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)]">
+                </div>
+                <div class="flex flex-col">
+                    <label for="visitDate">Preferred Date</label>
+                    <input id="visitDate" type="date" name="visitDate" class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)]">
+                </div>
+                <div class="flex flex-col">
+                    <label for="visitMessage">Message</label>
+                    <textarea id="visitMessage" name="message" rows="4" placeholder="Tell us your preferred time or any question" class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)]"></textarea>
+                </div>
+                <button type="submit" class="border border-black bg-blue-500 rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold hover:bg-red-500 transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Book Visit</button>
+            </form>
+        </div>
+    </dialog>
+        
+    <!-- Using Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/index.js"></script>
+</body>
+        
+</html>

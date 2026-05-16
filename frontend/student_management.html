@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management | Student</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="sticky top-0 z-50 flex items-center justify-between px-[var(--padding-md)] md:px-[var(--padding-lg)] py-[var(--padding-sm)] bg-[var(--primary-hover)] backdrop-blur-md shadow-sm">
+
+        <!-- Left: menu + title -->
+        <div class="flex items-center gap-3">
+            <button type="button"
+                class="flex items-center justify-center w-[42px] h-[42px] rounded-[var(--radius-md)] text-[var(--text-main)] hover:bg-white/10 transition md:hidden"
+                aria-label="Open menu">
+                <i id="menuToggle" class="fa-solid fa-bars text-[20px]"></i>
+            </button>
+
+            <h1 class="text-[var(--bg-main)] font-semibold text-[20px] md:text-[26px] tracking-wide">
+                [schoolName]
+            </h1>
+        </div>
+
+        <!-- Right: actions -->
+        <div class="flex items-center gap-4">
+
+            <!-- Notification -->
+            <button class="relative flex items-center justify-center w-[40px] h-[40px] rounded-full hover:bg-white/10 transition">
+                <i class="fa-regular fa-bell text-[20px] text-[var(--text-main)]"></i>
+
+                <!-- notification dot -->
+                <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+            </button>
+
+            <!-- Profile -->
+            <div class="flex items-center gap-2 cursor-pointer group">
+                <img src="/frontend/img/FB_IMG_1738065673948.jpg.jpeg"
+                    class="w-[40px] h-[40px] object-cover rounded-full ring-2 ring-transparent group-hover:ring-white/40 transition">
+
+                <!-- Optional name (hidden on small screens) -->
+                <span class="hidden md:block text-sm text-[var(--text-main)]">
+                    Admin
+                </span>
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="flex flex-col md:flex-row md:justify-between h-[calc(100vh-56px)]">
+
+        <!-- NAVIGATION -->
+        <nav class="hidden w-screen h-[calc(100vh-180px)] fixed px-[var(--padding-sm)] py-[var(--padding-sm)] bg-[var(--bg-main)] text-[var(--text-secondary)] flex flex-col gap-[var(--padding-sm)] overflow-x-auto md:w-[200px] md:fixed md:top-[56px] md:h-[calc(100vh-56px)] md:py-[var(--padding-md)] md:flex">
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Home</button>
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Management</button>
+            <div class="hidden flex flex-col rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">
+                <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Student</button>
+                <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration=[var(--transition-smooth-time)] [var(--transition-smooth)]">Teacher</button>
+                <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Class</button>
+                <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Subject</button>
+            </div>
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)]">Message</button>
+            <button class="bg-[var(--bg-light)] rounded-[var(--radius-md)] px-[var(--padding-md)] py-[var(--padding-sm)] font-bold text-[var(--text-muted)] my-[var(--padding-sm)] whitespace-nowrap hover:bg-[var(--bg-main)] hover:text-white transition-all duration-[var(--transition-smooth-time)] [var(--transition-smooth)] mt-auto">Settings</button>
+        </nav>
+        <main class="min-h-screen m-[var(--padding-sm)] bg-transparent rounded-[var(--radius-lg)] grid grid-cols-2 w-full md:m-[var(--padding-lg)] md:ml-[calc(200px+var(--padding-lg))] gap-[var(--padding-lg)] gap-y-[var(--padding-lg)]">
+            <section class="col-span-2 bg-white/5 rounded-[var(--radius-lg)] p-[var(--padding-lg)] flex flex-col gap-[10px]">
+                <div class="flex flex-row justify-between items-center">
+                    <h2 class="text-2xl font-bold">Student List</h2>
+                    <div>
+                        <i class="fa-solid fa-bars cursor-pointer"></i>
+                        <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+                        <i class="fa-solid fa-plus cursor-pointer"></i>
+                    </div>
+
+                </div>
+                <div class="flex flex-col gap-[10px]">
+                    <div class="grid grid-cols-3 gap-[10px]">
+                        <p class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">S001</p>
+                        <p class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Ekwere Noble</p>
+                        <p class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">SS3</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-[10px]">
+                        <p class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">S002</p>
+                        <p class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Ekwere Nathan</p>
+                        <p class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">SS3</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-[10px]">
+                        <p class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">S003</p>
+                        <p class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">Noble Nathan</p>
+                        <p class="p-2 rounded bg-[var(--bg-main)] hover:bg-[var(--primary)] hover:text-white transition">SS3</p>
+                    </div>
+
+                </div>
+
+            </section>
+            <section class="bg-white/5 rounded-[var(--radius-lg)] p-[var(--padding-lg)] grid grid-cols-2 gap-[10px] gap-y-[var(--padding-lg)]">
+                <img src="img/FB_IMG_1738065673948.jpg.jpeg" alt="Profile Pic" class="row-span-2 rounded-[var(--radius-md)]">
+                <div class="row-span-2 flex flex-col justify-center">
+                    <p class="text-sm opacity-80">Student ID:</p>
+                    <h2 class="text-2xl font-bold mt-2 self-end">S001</h2>
+                </div>
+                <div class="col-span-2 flex flex-row justify-between">
+                    <p class="text-sm opacity-80">Full Name:</p> 
+                    <h2 class="text-2xl font-bold mt-2">Ekwere Noble</h2>
+                </div>
+                <div class="col-span-2 flex flex-row justify-between">
+                    <p class="text-sm opacity-80">Class: </p>
+                    <h2 class="text-2xl font-bold mt-2">SS3</h2>
+                </div>
+            </section>
+            <section class="bg-white/5 rounded-[var(--radius-lg)] p-[var(--padding-lg)] grid grid-cols-1 gap-[10px] gap-y-[var(--padding-lg)]">
+                <div class="row-span-2 flex flex-row justify-between">
+                    <p class="text-sm opacity-80">GPA/AVG Score:</p>
+                    <h2 class="text-2xl font-bold mt-2">89%</h2>
+                </div>
+                <div class="row-span-2 flex flex-row justify-between">
+                    <p class="text-sm opacity-80">Attendace:</p>
+                    <h2 class="text-2xl font-bold mt-2">59%</h2>
+                </div>
+                <div class="row-span-2 flex flex-row justify-between">
+                    <p class="text-sm opacity-80">Subject Offered:</p>
+                    <h2 class="text-2xl font-bold mt-2">9</h2>
+                </div>
+                <div class="row-span-2 flex flex-row justify-between">
+                    <p class="text-sm opacity-80">Position:</p>
+                    <h2 class="text-2xl font-bold mt-2">10th</h2>
+                </div>
+            </section>
+            
+        </main>
+
+    <!-- Using Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/header.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+</html>
